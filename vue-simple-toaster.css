@@ -1,0 +1,74 @@
+.vue-simple-toaster {
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    font-size: 17px;
+}
+
+.vue-simple-toaster.toaster-top{
+    margin-left: -125px;
+    top:5%;
+    left:50%;
+}
+
+.vue-simple-toaster.toaster-top-center{
+    margin-left: -125px;
+    top:5%;
+    left:50%;
+}
+
+.vue-simple-toaster.toaster-top-right{
+    top:5%;
+    right:5%;
+}
+
+.vue-simple-toaster.toaster-top-left{
+    top:5%;
+    left:5%;
+}
+
+.vue-simple-toaster.toaster-center{
+    margin-left: -125px;
+    transform: translateY(-50%);
+    top:50%;
+    left:50%;
+}
+
+.vue-simple-toaster.toaster-center-left{
+    transform: translateY(-50%);
+    top:50%;
+    left:5%;
+}
+
+.vue-simple-toaster.toaster-center-right{
+    transform: translateY(-50%);
+    top:50%;
+    right:5%;
+}
+
+.vue-simple-toaster.toaster-bottom{
+    margin-left: -125px;
+    bottom:5%;
+    left:50%;
+}
+
+.vue-simple-toaster.toaster-bottom-left{
+    bottom:5%;
+    left:5%;
+}
+
+.vue-simple-toaster.toaster-bottom-center{
+     margin-left: -125px;
+    bottom:5%;
+    left:50%;
+}
+
+.vue-simple-toaster.toaster-bottom-right{
+    bottom:5%;
+    right:5%;
+}
