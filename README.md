@@ -36,16 +36,16 @@ export default {
 ## Default options
 The toaster has some default options
 ```
-		position: 'top-left',
-		duration: 2500,
-		animation:'fadeIn'
+    position: 'top-left',
+    duration: 2500,
+    animation:'fadeIn'
 ```
 You can change the default options by passing an options object
 ```
 Vue.use(Toaster, {
     position: 'top-left',
-		duration: 3000,
-		animation:'slideDown'})
+    duration: 3000,
+    animation:'slideDown'})
 ```   
 Available positions are: `'top'`,`'top-left'`,`'top-center'`,`'top-right'`,`'center'`,`'center-left'`,`'center-right'`,`'bottom'`,`'bottom-left'`,`'bottom-center'` and `'bottom-right'`
 Available animations are: `'slideDown'`,`'slideUp'` and `fadeIn`.
