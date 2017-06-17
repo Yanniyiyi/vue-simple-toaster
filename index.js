@@ -3,7 +3,6 @@ var Toaster = {};
 Toaster.install = function(Vue,options)
 {
 	let defaultOptions = {
-		type: 'normal',
 		position: 'top-left',
 		duration: 2500,
 		animation:'fadeIn'
@@ -19,12 +18,9 @@ Toaster.install = function(Vue,options)
 		'bottom','bottom-left','bottom-center','bottom-right'
 	];
 
-	if(options){
-		for(let property in options){
-			defaultOptions[property] = options[property];
-		}
-	};
-
+	let validTypes = [
+		'warn','alert','success','error'
+	];
 
 	if(validPostions.indexOf(defaultOptions.position) < 0){
 		defaultOptions.position = 'fadeIn';
@@ -34,9 +30,15 @@ Toaster.install = function(Vue,options)
 		defaultOptions.animation = 'fadeIn';
 	};
 
-	Vue.prototype.$toaster = (message,position,animation) => {
+	Vue.prototype.$toaster = (message,position,animation,type) => {
 		let currentPosition = defaultOptions.position;
 		let currentAnimation = defaultOptions.animation;
+		let currentType = 'normal'
+
+		if(type && validTypes.indexOf(type) >= 0)
+		{
+			currentType = type;
+		}
 
 		if(position && validPostions.indexOf(position) >= 0)
 		{
@@ -49,7 +51,11 @@ Toaster.install = function(Vue,options)
 		}
 
 		let toaster = Vue.extend({
-			template: '<div class="vue-simple-toaster ' +  currentAnimation + ' toaster-' + currentPosition + '">' + message + '</div>'
+			template: '<div class="vue-simple-toaster ' + 
+			currentType + ' ' + 
+			currentAnimation + ' toaster-' +
+			currentPosition + '">' + message + 
+			'</div>'
 		});
 
 		let tempToaster = new toaster().$mount().$el;
@@ -60,6 +66,25 @@ Toaster.install = function(Vue,options)
 			document.body.removeChild(tempToaster);
 		},defaultOptions.duration);
 	}
+
+	Vue.prototype.$toaster.options = (options) => {
+		if(options){
+			for(let property in options){
+				defaultOptions[property] = options[property];
+			}
+		};
+	}
+
+	Vue.prototype.$toaster.options(options);
+
+
+	['warn','alert','success','error'].forEach(function(type){
+		Vue.prototype.$toaster[type] = function(message,position,animation){
+			Vue.prototype.$toaster(message,position,animation,type);
+		}
+	});
+
+
 }
 
 module.exports = Toaster;

@@ -1,6 +1,6 @@
 {
   "name": "vue-simple-toaster",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "A simple toaster for vue.js",
   "main": "index.js",
   "scripts": {

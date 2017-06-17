@@ -1,6 +1,5 @@
 .vue-simple-toaster {
     width: 250px;
-    background-color: #333;
     color: #fff;
     text-align: center;
     border-radius: 2px;
@@ -8,6 +7,26 @@
     position: fixed;
     z-index: 1;
     font-size: 17px;
+}
+
+.vue-simple-toaster.normal{
+    background-color: #1F2D3D
+}
+
+.vue-simple-toaster.success{
+    background-color: #13CE66
+}
+
+.vue-simple-toaster.warn{
+    background-color: #F7BA2A
+}
+
+.vue-simple-toaster.error{
+    background-color: #FF4949
+}
+
+.vue-simple-toaster.alert{
+    background-color: #20A0FF
 }
 
 .vue-simple-toaster.toaster-top{
