@@ -3,8 +3,8 @@
 `npm install vue-simple-toaster`
 # How to use
 Step 1. `import Toaster from 'vue-simple-toaster'`
-Step 2. `import 'vue-simple-toaster/vue-simple-toaster.css'`
-Step 3. `Vue.use(Toaster);`
+  Step 2. `import 'vue-simple-toaster/vue-simple-toaster.css'`
+  Step 3. `Vue.use(Toaster);`
 # Example
 Now in your vue components, you can use `this.$toaster(message, position, animation) ` to show a toast, just like this
 Note: the `position` and `animation` parameters are not necessary.
