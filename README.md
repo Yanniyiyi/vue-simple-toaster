@@ -65,6 +65,7 @@ this.$toaster.danger('hello world! this is a test','top-center','fadeIn');
 this.$toaster.warn('hello world! this is a test','top-center','fadeIn');
 this.$toaster.success('hello world! this is a test','top-center','fadeIn');
 ```
+### If you wish to use your own CSS style. Then download the css file and replce the content with your own code. But please do not change the class name. Just modify the style content. After that import your own css file.
 # To-do list
 - toaster's position should be more accurate.
 
