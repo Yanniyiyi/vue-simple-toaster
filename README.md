@@ -7,6 +7,7 @@ Step 2. `import 'vue-simple-toaster/vue-simple-toaster.css'`
 Step 3. `Vue.use(Toaster);`
 # Example
 Now in your vue components, you can use `this.$toaster(message, position, animation) ` to show a toast, just like this
+Note: the `position` and `animation` parameters are not necessary.
 ```
 <template>
   <div id="app">
