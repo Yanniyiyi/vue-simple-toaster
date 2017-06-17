@@ -48,7 +48,7 @@ Vue.use(Toaster, {
     duration: 3000,
     animation:'slideDown'})
 ```   
-Available positions are: `'top'`,`'top-left'`,`'top-center'`,`'top-right'`,`'center'`,`'center-left'`,`'center-right'`,`'bottom'`,`'bottom-left'`,`'bottom-center'` and `'bottom-right'`
+Available positions are: `'top'`,`'top-left'`,`'top-center'`,`'top-right'`,`'center'`,`'center-left'`,`'center-right'`,`'bottom'`,`'bottom-left'`,`'bottom-center'` and `'bottom-right'`    
 Available animations are: `'slideDown'`,`'slideUp'` and `fadeIn`.
 ## Change at running time
 Also, if you want to use other positions or animations for just one time, you can pass the animations, and positions when you invoke the `this.$toaster(message, position, animation)` method. 
