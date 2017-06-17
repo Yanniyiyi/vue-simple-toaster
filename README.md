@@ -66,6 +66,5 @@ this.$toaster.warn('hello world! this is a test','top-center','fadeIn');
 this.$toaster.success('hello world! this is a test','top-center','fadeIn');
 ```
 # To-do list
-- change toaster default options at running time
 - toaster's position should be more accurate.
-- more methods based on the toaster type such as `this.$toaster.warn()`, `this.$toaster.danger()`
+
