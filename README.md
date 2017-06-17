@@ -50,10 +50,22 @@ Vue.use(Toaster, {
 ```   
 Available positions are: `'top'`,`'top-left'`,`'top-center'`,`'top-right'`,`'center'`,`'center-left'`,`'center-right'`,`'bottom'`,`'bottom-left'`,`'bottom-center'` and `'bottom-right'`    
 Available animations are: `'slideDown'`,`'slideUp'` and `fadeIn`.
+## Change default options
+You can change default options by the method `this.$toaster.options(options)`
 ## Change at running time
 Also, if you want to use other positions or animations for just one time, you can pass the animations, and positions when you invoke the `this.$toaster(message, position, animation)` method. 
+## Toast type
+The `$toaster` method could receive a `type` parameter, which could change the alter outlook. Available types are `'normal'` which is set as default, `'alert'`, `'error'`, `'danger'`, `'warn'` and `'success'`
+Example `this.$toaster('hello world! this is a test','top-center','fadeIn','warn');`
+Also, you can use a built in function based on toast type like this
+```
+this.$toaster.alert('hello world! this is a test','top-center','fadeIn');
+this.$toaster.error('hello world! this is a test','top-center','fadeIn');
+this.$toaster.danger('hello world! this is a test','top-center','fadeIn');
+this.$toaster.warn('hello world! this is a test','top-center','fadeIn');
+this.$toaster.success('hello world! this is a test','top-center','fadeIn');
+```
 # To-do list
-- toaster type
 - change toaster default options at running time
 - toaster's position should be more accurate.
 - more methods based on the toaster type such as `this.$toaster.warn()`, `this.$toaster.danger()`
