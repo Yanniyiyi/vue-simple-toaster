@@ -2,7 +2,7 @@
 # Install
 `npm install vue-simple-toaster`
 # How to use
-Step 1. `import Toaster from 'vue-simple-toaster'`
+Step 1. `import Toaster from 'vue-simple-toaster'`    
 Step 2. `import 'vue-simple-toaster/vue-simple-toaster.css'`      
 Step 3. `Vue.use(Toaster);`
 # Example
